@@ -2,6 +2,8 @@
 
 CodeFlex AI is a fitness web app that creates personalized workout and meal plans through a voice conversation with an AI assistant.
 
+Live Demo: [View CodeFlex AI](https://code-flex-training-app-ai.vercel.app/)
+
 Users share their fitness goals, experience, available workout days, dietary preferences, and physical limitations. The app uses these details to generate a plan and saves it to their profile.
 
 ## How it works
