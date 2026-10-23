@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeFlex AI
 
-## Getting Started
+CodeFlex AI is a fitness web app that creates personalized workout and meal plans through a voice conversation with an AI assistant.
 
-First, run the development server:
+Users share their fitness goals, experience, available workout days, dietary preferences, and physical limitations. The app uses these details to generate a plan and saves it to their profile.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How it works
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Sign in** or create an account with Clerk.
+2. **Start a voice conversation** with the Vapi assistant and answer questions about your goals and needs.
+3. **Generate your plan.** Vapi sends the collected information to the Convex backend, where Google Gemini creates the workout and meal plans.
+4. **Save the results.** The backend validates the generated data and stores it in Convex. Previous plans are kept, and the new plan becomes active.
+5. **View your profile** to browse saved plans, see exercises with sets and reps, and check meals and daily calorie targets.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Technology | Purpose |
+| --- | --- |
+| Next.js, React, and TypeScript | App pages, components, and application logic |
+| Tailwind CSS and shadcn/ui | Styling and reusable UI components |
+| Clerk | Sign-up, sign-in, and user authentication |
+| Vapi | Voice conversations with the AI assistant |
+| Google Gemini | Workout and meal plan generation |
+| Convex | Backend functions, database, and live updates to saved plans |
+| Lucide React and Phosphor Icons | Interface icons |
